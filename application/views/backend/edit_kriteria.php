@@ -1,4 +1,7 @@
-<form style="position: fixed; top: 30%; left: 35%; width: 700px; " method="post" action="<?php echo base_url(); ?>admin/kriteria/edit_kriteria" ?>
+<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<form style="position: fixed; top: 30%; left: 20%; width: 700px; " method="post" action="<?php echo base_url(); ?>admin/kriteria/edit_kriteria" ?>
 			    	<div class="form-group">
 				    <table style="text-align: center" class="table table-striped ">
             <input type="hidden" name="id_kriteria"  value="<?php echo $id_kriteria; ?>" >
@@ -69,12 +72,15 @@
                     <td style="width: 150px"><label>Listrik</label></td>
                     </tr>
               <?php } if ($id_kriteria=='1'|| $id_kriteria=='2'|| $id_kriteria=='3' || $id_kriteria=='4' || $id_kriteria=='5' ) { ?>
-                
+
 
                  <?php }  ?>
 
             </table>
 
 				  <button type="submit" class="btn btn-primary">Ubah</button>
-				  <button type="button" onclick="location.href='<?php echo base_url(); ?>/admin/kriteria'" class="btn btn-success">Kembali</button>
-				</form>
+				 <button type="button" onclick="location.href='<?php echo base_url(); ?>/admin/kriteria'" class="btn btn-success">Kembali</button>
+			</form>
+	</div>
+	<div class="col-md-1"></div>
+</div>

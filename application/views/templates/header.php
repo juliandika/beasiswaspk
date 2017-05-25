@@ -14,12 +14,21 @@
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="<?php echo base_url(); ?>home">Registrasi Mahasiswa</a>
+          <a class="navbar-brand" href="<?php echo base_url(); ?>admin/mahasiswa">Home</a>
         </div>
         <div class="navbar-header">
-          <a class="navbar-brand" href="<?php echo base_url(); ?>home">Kriteria</a>
+          <a class="navbar-brand" href="<?php echo base_url(); ?>admin/kriteria/view_kriteria">Kriteria</a>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="<?php echo base_url(); ?>admin/calculate/ranking">Ranking</a>
         </div>
         <div id="navbar">
+
+          <ul class="nav navbar-nav navbar-right nav-list" id="navigasi">
+            <li><a href="#register" data-toggle="modal" data-target="#register"><?php echo $this->session->userdata('username'); ?></a></li>
+            <li><a href="<?php echo base_url(); ?>logout/index">Logout</a></li>
+          </ul>
+
         </div>
       </div>
     </nav>

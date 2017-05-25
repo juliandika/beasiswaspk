@@ -44,6 +44,8 @@
         <?php } ?>
         </tbody>
       </table>
+
+      <a href="<?php base_url(); ?>normalisasi" class="btn btn-primary" role="button">Normalisasi</a>
     </div>
     <div class="col-md-1"></div>
   </div>

@@ -18,6 +18,8 @@
 
 
 
+
+
             <div class="form-group">
               <label for="exampleSelect2" class="col-sm-2 control-label">Gaji Orang Tua</label>
               <div class="col-sm-10">
@@ -35,20 +37,9 @@
 
 
             <div class="form-group">
-              <label for="exampleSelect2" class="col-sm-2 control-label">IPK</label>
+              <label for="inputEmail3" class="col-sm-2 control-label">IPK</label>
               <div class="col-sm-10">
-                <select class="form-control" id="ipk" name="ipk" value="<?= set_value('ipk') ?>">
-                  <option value="<?= set_value('ipk') ?>">Pilih IPK</option>
-                  <option value="1">di bawah 2.00</option>
-                  <option value="2">2.01 - 2.25</option>
-                  <option value="3">2.26 - 2.50</option>
-                  <option value="4">2.51 - 2.75</option>
-                  <option value="5">2.76 - 3.00</option>
-                  <option value="6">3.01 - 3.25</option>
-                  <option value="7">3.26 - 3.50</option>
-                  <option value="6">3.51 - 3.75</option>
-                  <option value="6">3.75 - 4.00</option>
-                </select>
+                <input type="text" class="form-control" name="ipk" placeholder="" value="<?= set_value('ipk') ?>">
               </div>
             </div>
 
@@ -66,7 +57,7 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleSelect2" class="col-sm-2 control-label">Voltase Listrik</label>
+              <label for="exampleSelect2" class="col-sm-2 control-label">Daya Listrik</label>
               <div class="col-sm-10">
                 <select class="form-control" id="listrik" name="listrik" value="<?= set_value('listrik') ?>">
                   <option value="<?= set_value('listrik') ?>">Pilih voltase</option>
@@ -78,20 +69,11 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleSelect2" class="col-sm-2 control-label">Jumlah Poin SKP</label>
+              <label for="inputEmail3" class="col-sm-2 control-label">Jumlah Poin SKP</label>
               <div class="col-sm-10">
-                <select class="form-control" id="jml_skp" name="jml_skp" value="<?= set_value('skp') ?>">
-                  <option value="<?= set_value('jmlskp') ?>">Jumlah Poin SKP</option>
-                  <option value="1">0 - 25</option>
-                  <option value="2">26 - 50</option>
-                  <option value="3">51 - 75</option>
-                  <option value="4">76 - 100</option>
-                  <option value="5">di atas 100</option>
-                </select>
+                <input type="text" class="form-control" name="jml_skp" placeholder="" value="<?= set_value('jml_skp') ?>">
               </div>
             </div>
-
-
 
 
             <div class="form-group">

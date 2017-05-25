@@ -8,10 +8,10 @@
               <th>Id</th>
               <th>Nama</th>
               <th>IPK</th>
-              <th>Jumlah Tanggungan</th>
+              <th>Jumlah Tanggungan Orang Tua</th>
               <th>Gaji Orang Tua</th>
               <th>Jumlah SKP</th>
-              <th>Tagihan Listrik</th>
+              <th>Daya Listrik</th>
               <th>Foto</th>
               <th>
                 <?=anchor('admin/mahasiswa/create','Tambah Data', ['class'=>'btn btn-primary btn-sm'])?>
@@ -25,9 +25,38 @@
               <td><?=$mhs->nama?></td>
               <td><?=$mhs->ipk?></td>
               <td><?=$mhs->jml_tanggungan?></td>
-              <td><?=$mhs->gaji?></td>
+              <td>
+              <?php
+                if($mhs->gaji == '1'){
+                  echo '> Rp4.500.001';
+                }elseif($mhs->gaji == '2'){
+                  echo 'Rp3.500.001 - Rp4.500.000';
+                }elseif($mhs->gaji == '3'){
+                  echo 'Rp2.500.001 - Rp3.500.000';
+                }elseif ($mhs->gaji == '4') {
+                  echo 'Rp1.500.001 - Rp2.500.000';
+                }elseif($mhs->gaji == '5'){
+                  echo 'Rp500.000 - Rp1.500.000';
+                }else{
+                  echo '< Rp500.000';
+                }
+              ?>
+
+
+              </td>
               <td><?=$mhs->jml_skp?></td>
-              <td><?=$mhs->listrik?></td>
+              <td>
+              <?php
+                if($mhs->listrik=='1'){
+                  echo 'di atas 900';
+                }elseif($mhs->listrik=='2'){
+                  echo '450 - 900';
+                }else{
+                  echo 'di bawah 450';
+                }
+              ?>
+
+              </td>
 
               <td><?php
                 $product_image = ['src'   => 'uploads/' . $mhs->image,

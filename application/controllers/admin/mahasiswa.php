@@ -4,6 +4,15 @@ class Mahasiswa extends CI_Controller {
 
   public function __construct(){
     parent::__construct();
+
+
+    if ($this->session->userdata('username')=="") {
+        redirect('login/index');
+    }elseif($this->session->userdata('level') == '2'){
+      redirect('spk_alternatif');
+
+    }
+
     $this->load->model('model_mahasiswa');
   }
 

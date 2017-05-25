@@ -3,6 +3,19 @@
 class Kriteria extends CI_Controller {
 
 
+
+  public function __construct() {
+        parent::__construct();
+        if ($this->session->userdata('username')=="") {
+         redirect('login');
+        }elseif($this->session->userdata('level') == '2'){
+         redirect('spk_alternatif');
+        }
+              $this->load->helper('url');
+              $this->load->model('model_mahasiswa');
+              $this->load->model('model_perbandingan');
+
+  }
   public function view_kriteria(){
 
     $data = $this->model_perbandingan->getKriteria();
